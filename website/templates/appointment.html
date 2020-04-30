@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Appointment Confirmation{% endblock %}
+
+{% block content %}
+
+<center>
+  <h2> Thanks {{ your_name }} for the information! </h2>
+  <p>We received your appointment request, we will respond soon.</p>
+    
+  <p>Here are your given detail information</p>
+  <div>
+    <strong>Given Name:</strong>     {{ your_name }}<br/>
+    <strong>Given Phone:</strong>    {{ your_phone }}<br/>
+    <strong>Given Email:</strong>    {{ your_email }}<br/>
+    <strong>Given Address:</strong>  {{ your_address }}<br/>
+    <strong>Chosen Day:</strong>     {{ your_day }}<br/>
+    <strong>Chosen Time:</strong>    {{ your_time }}<br/>
+  </div>
+  
+</center>
+  <br/><br/><br/>
+
+<center>
+  <h3> This is the location of the hospital in case you wanna come over.</h3>
+</center>
+
+  <section class="dento-contact-area mt-50 mb-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="google-maps mb-100">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44597.63114419081!2d103.96760440179929!3d30.57504443094977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36efc6d2cabb3e93%3A0x223fa394d6361924!2sSichuan%20University%20Jiang&#39;an%20Campus%20%EF%BC%88South%20Gate%201%EF%BC%89!5e0!3m2!1sen!2snp!4v1588085364762!5m2!1sen!2snp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br/><br/>
+
+
+{% endblock %}

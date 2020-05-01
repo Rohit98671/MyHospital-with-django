@@ -1,3 +1,8 @@
+/* ******************************
+ * classyNav.js 1.0.0
+ * Responsive Megamenu plugins
+ * Copyright (c) 2018 Designing World - https://themeforest.net/user/designing-world
+****************************** */
 
 (function ($) {
     $.fn.classyNav = function (options) {

@@ -1,5 +1,8 @@
 
 import os
+#import django_heroku
+#import dj_database_url
+#from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,6 +40,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'whitenoise.middleware.WhiteNoiseMiddleWare',
 ]
 
 ROOT_URLCONF = 'myproject.urls'
@@ -113,6 +117,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
 ]
 
+#STATICFILES_STORAGE ='whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Email Settings
 
 EMAIL_HOST = 'localhost'
@@ -128,10 +134,10 @@ EMAIL_USE_TLS = False #These are security stuffs
 #if you want to actually send an email like a professional website then you need to change the server
 #for example
 '''
-EMAIL_HOST = 'smtp.gmail.com'               This is mostly for gmail users, you can add more like hotmail
-EMAIL_PORT = 587                            The port for gmail is 587
-EMAIL_HOST_USER = 'sharmars8520@gmail.com'  Actually receivers Email
-EMAIL_HOST_PASSWORD = '******'              password for that host email
+EMAIL_HOST = 'smtp.gmail.com'               #This is mostly for gmail users, you can add more like hotmail
+EMAIL_PORT = 587                            #The port for gmail is 587
+EMAIL_HOST_USER = 'sharmars8520@gmail.com'  #Actually receivers Email
+EMAIL_HOST_PASSWORD = '******'              ##password for that host email
 EMAIL_USE_TLS = True                        Set this true, maybe gmail uses that
 
 So here if you want to make it send an automatic email then you need to do some stuffs in gmail
@@ -142,6 +148,5 @@ go in
 #accounts.google.com/DisplayUnlockCaptcha
 # myaccount.google.com/apppasswords
 
-
 '''
-
+#django_heroku.settings(locals())

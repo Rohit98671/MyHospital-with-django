@@ -48,13 +48,13 @@ def appointment(request):
 		your_phone = request.POST['your-phone']
 		your_email = request.POST['your-email']
 		your_address = request.POST['your-address']
-		your_day = request.POST['your-day']
+		your_date = request.POST['your-date']
 		your_time = request.POST['your-time']
 		your_message = request.POST['your-message']
 
 		#Sending an email part
 
-		appointment_message = "\nName: " + your_name + "\nPhone: " + your_phone + "\nEmail: " + your_email + "\nAddress: " + your_address + "\nDay: " + your_day + "\nTime: " + your_time + "\nMessage: " + your_message
+		appointment_message = "\nName: " + your_name + "\nPhone: " + your_phone + "\nEmail: " + your_email + "\nAddress: " + your_address + "\nDate: " + your_date + "\nTime: " + your_time + "\nMessage: " + your_message
 
 		send_mail(
 			'Appointment Request', #subject
@@ -68,7 +68,7 @@ def appointment(request):
 			'your_phone': your_phone,
 			'your_email': your_email,
 			'your_address': your_address,
-			'your_day': your_day,
+			'your_date': your_date,
 			'your_time': your_time,
 			'your_message': your_message
 			})
